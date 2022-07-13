@@ -35,7 +35,7 @@ app.get("/posts", async (req, res) => {
     },
   });
 
-  res.json({ posts, nextCursor: posts[posts.length - 1].id, total });
+  res.json({ posts, cursor: posts[posts.length - 1].id, total });
 });
 
 module.exports = app;
